@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Body */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-image: url(FOTO\ BERSAMA\ IMAKE.png);
+  background-color: rgba(248,244,244,0.8);
+  backdrop-filter: blur(1px);
+  background-size: cover;
+  background-position: 0 - 100px;
+  color: #1e293b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container utama */
+.container {
+  background-color: rgba(248,244,244,0.8);
+  backdrop-filter: blur(0,05px);
+  border: 1px solid #295ea4;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 400px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Bagian Profil: gambar, nama, bidang, deskripsi */
+.profile {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #1e3a8a;
+}
+
+.field {
+  font-size: 1rem;
+  color: #3b82f6;
+}
+
+.desc {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* Daftar Tautan atau Link */
+.link-list {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-top: 1.5rem;
+}
+
+.link-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.link-list::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+.link-item {
+  background-color: #acd6f3;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.link-item i {
+  font-size: 1.2rem;
+}
+
+.link-item:hover {
+  background-color: #3b82f6;
+  color: #f8fafc;
+  transform: translateY(-2px);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif untuk Perangkat Mobile */
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    height: auto;
+    max-height: 90vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .field {
+    font-size: 0.9rem;
+  }
+
+  .desc {
+    font-size: 0.85rem;
+  }
+
+  .link-list {
+    margin-top: 1rem;
+    max-height: 50vh;
+  }
+}
